@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _5
+namespace _6
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -25,29 +25,43 @@ namespace _5
             InitializeComponent();
         }
 
-
         private void compute()
         {
             try
             {
+                int number = int.Parse(Number.Text);
 
-                double x = double.Parse(X.Text);
-                double y = double.Parse(Y.Text);
+                string result = "";
 
-                if (x > -23 && y > x && y < 0)
+                if (number == 0)
                 {
-                    Result.Content = "Да";
-                }
-
-                else if ((x == -23 && y >= x && y <= 0) || (x >= -23 && y == x && y <= 0) || (x >= -23 && y >= x && y == 0))
-                {
-                    Result.Content = "На границе";
+                    Result.Content = "Нулевое число";
                 }
 
                 else
                 {
-                    Result.Content = "Нет";
+                    if (number > 0)
+                    {
+                        result += "Положительное ";
+                    }
+                    else
+                    {
+                        result += "Отрицательное ";
+                    }
+
+
+                    if (number % 2 == 0)
+                    {
+                        result += "чётное";
+                    }
+                    else
+                    {
+                        result += "нечётное";
+                    }
+
+                    Result.Content = $"{result} число";
                 }
+
             }
 
             catch
@@ -56,13 +70,7 @@ namespace _5
             }
         }
 
-
-        private void Y_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            compute();
-        }
-
-        private void X_TextChanged(object sender, TextChangedEventArgs e)
+        private void Number_TextChanged(object sender, TextChangedEventArgs e)
         {
             compute();
         }
