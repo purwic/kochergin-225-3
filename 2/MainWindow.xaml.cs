@@ -24,5 +24,49 @@ namespace _2
         {
             InitializeComponent();
         }
+
+
+        private void compute()
+        {
+
+            try
+            {
+
+                double first = double.Parse(First.Text);
+                double second = double.Parse(Second.Text);
+
+                if(first < second)
+                {
+                    Smallest.Content = $"Первое ({first})";
+                }
+
+                else if(first > second)
+                {
+                    Smallest.Content = $"Второе ({second})";
+                }
+
+                else
+                {
+                    Smallest.Content = "Меньшего нет (они равны)";
+                }
+            }
+
+            catch
+            {
+
+            }
+
+        }
+
+
+        private void First_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            compute();
+        }
+
+        private void Second_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            compute();
+        }
     }
 }
