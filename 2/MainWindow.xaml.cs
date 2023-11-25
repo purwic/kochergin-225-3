@@ -53,7 +53,7 @@ namespace _2
 
             catch
             {
-
+                Smallest.Content = "-";
             }
 
         }

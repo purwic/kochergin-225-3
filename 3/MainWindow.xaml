@@ -61,21 +61,21 @@
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <Label Content="Введите первое число: " Style="{StaticResource Main Text}"></Label>
-            <TextBox x:Name="A1" Style="{StaticResource TextBox}" TextChanged="X1_TextChanged"></TextBox>
+            <TextBox x:Name="A1" Style="{StaticResource TextBox}" TextChanged="A1_TextChanged"></TextBox>
 
 
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <Label Content="Введите второе число: " Style="{StaticResource Main Text}"></Label>
-            <TextBox x:Name="A2" Style="{StaticResource TextBox}" TextChanged="Y1_TextChanged"></TextBox>
+            <TextBox x:Name="A2" Style="{StaticResource TextBox}" TextChanged="A2_TextChanged"></TextBox>
 
 
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <Label Content="Введите третье число: " Style="{StaticResource Main Text}"></Label>
-            <TextBox x:Name="A3" Style="{StaticResource TextBox}" TextChanged="X2_TextChanged"></TextBox>
+            <TextBox x:Name="A3" Style="{StaticResource TextBox}" TextChanged="A3_TextChanged"></TextBox>
 
 
         </StackPanel>
@@ -89,7 +89,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
                 <Label Content="Среднее из них:" Style="{StaticResource Sub Text}"></Label>
-                <Label x:Name="Middle" Style="{StaticResource Main Text}">-</Label>
+                <Label x:Name="Result" Style="{StaticResource Main Text}">-</Label>
 
             </StackPanel>
         </StackPanel>
